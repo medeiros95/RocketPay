@@ -11,7 +11,7 @@ ccBgColor02.setAttribute("fill", "Blue")
 function setCardType(type) {
   const colors = {
     visa: ["#436D99", "#2D57F2"],
-    masterCard: ["#DF9F29", "#C69347"],
+    mastercard: ["#DF9F29", "#C69347"],
     elo: ["#FFCD1C", "#535353"],
     default: ["Black", "Gray"],
   }
@@ -58,7 +58,7 @@ const cardNumberPattern = {
     {
       mask: "0000 0000 0000 0000",
       regex: /(^5[1-5]\d{0,2}|^22[2-9]\d|^2[3-7]\d{0,2})\d{0,12}/,
-      cardtype: "masterCard",
+      cardtype: "mastercard",
     },
     {
       mask: "0000 0000 0000 0000",
@@ -75,7 +75,6 @@ const cardNumberPattern = {
     const foundMask = dynamicMasked.compiledMasks.find(function (item) {
       return number.match(item.regex)
     })
-    console.log(foundMask)
 
     return foundMask
   },
